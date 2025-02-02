@@ -9,15 +9,6 @@ const min = prompt(`кількість хвилин`);
 //
 // example 1
 //
-
-// function leftFillNum(num, targetLength) {
-//   return num.toString().padStart(targetLength, "0");
-// }
-// let result = `${leftFillNum(Math.floor(min / 60), 2)}:${leftFillNum(min % 60, 2)}`;
-
-//
-// example 2
-//
 // function leftFillNum(num, len) {
 //   return String(num).padStart(len, "0");
 // }
@@ -25,7 +16,7 @@ const min = prompt(`кількість хвилин`);
 // const result = `${leftFillNum(Math.floor(min / 60), 2)}:${leftFillNum(min % 60, 2)}`;
 
 //
-// example 3
+// example 2
 //
 let result = `${Math.floor(min / 60).toString().padStart(2, "0")}:${(min % 60).toString().padStart(2, "0")}`;
 
