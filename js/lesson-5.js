@@ -14,18 +14,29 @@
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
 const login = prompt("Логін");
+
+// let pass;
+// if (login !== "Адмін") {
+//   alert("Я вас не знаю");
+// } else {
+//   pass = prompt("Пароль");
+// }
+// if (pass === null || pass === "") {
+//   alert("Скасовано");
+// } else if (pass === "Я головний") {
+//   alert("Добрий день!");
+// } else {
+//   alert("Невірний пароль!");
+// }
+
+
 let pass;
+let message = login === "Адмін"
+  ? (pass = prompt("Пароль")) === null || pass === ""
+    ? "Скасовано"
+    : pass === "Я головний"
+      ? "Добрий день!"
+    : "Невірний пароль!"
+  : "Я вас не знаю";
 
-if (login !== "Адмін") {
-  alert("Я вас не знаю");
-} else {
-  pass = prompt("Пароль");
-}
-
-if (pass === null || pass === "") {
-  alert("Скасовано");
-} else if (pass === "Я головний") {
-  alert("Добрий день!");
-} else {
-  alert("Невірний пароль!");
-}
+alert(message);

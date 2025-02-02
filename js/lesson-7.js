@@ -6,15 +6,25 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
+// function getNumbers(min, max) {
+//     let twins = 0;
+//     for (let calc = max; calc >= min; calc--) {
+//         console.log(calc);
+//         if (calc % 2 == 0) {
+//             twins += calc;
+//         }
+//     }
+//     return twins;
+// }
+
 function getNumbers(min, max) {
-    let twins = 0;
-    for (let calc = max; calc >= min; calc--) {
-        console.log(calc);
-        if (calc % 2 == 0) {
-            twins += calc;
-        }
-    }
-    return twins;
+  let calc = 0;
+    while (max >= min) {
+        console.log(max, calc);
+        if (max % 2 === 0) calc += max;
+        max--;
+    }        
+    return calc;
 }
 
-console.log(getNumbers(5, 28));
+console.log(getNumbers(5, 28)); //204

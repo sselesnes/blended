@@ -4,21 +4,24 @@
 // Виведіть в alert відповідне повідомлення, наприклад:
 // "10 входить в першу чверть"
 
-// const min = Math.floor(Math.random() * (59 - 0) + 0);
-
 const min = Math.floor(Math.random() * (59 - 0) + 0);
 
-let message, calc;
-calc = Math.floor(min / 15);
+// let message, calc;
+// calc = Math.floor(min / 15);
 
-if (calc >= 3) {
-  message = `${min} потрапляє у четверту чверть години`;
-} else if (calc >= 2) {
-  message = `${min} потрапляє у третю чверть години`;
-} else if (calc >= 1) {
-  message = `${min} потрапляє у другу чверть години`;
-} else {
-  message = `${min} потрапляє в першу чверть години`;
-}
+// if (calc >= 3) {
+//   message = `${min} потрапляє у четверту чверть години`;
+// } else if (calc >= 2) {
+//   message = `${min} потрапляє у третю чверть години`;
+// } else if (calc >= 1) {
+//   message = `${min} потрапляє у другу чверть години`;
+// } else {
+//   message = `${min} потрапляє в першу чверть години`;
+// }
 
+let dict = ["першу", "другу", "третю", "четверту"];
+let result = Math.floor(min / 15);
+let message = `${min} потрапляє у ${dict[result]} чверть години`;
+
+// console.log(message);
 alert(message);
