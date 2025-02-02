@@ -19,10 +19,19 @@
 //     ? [Number(t.slice(0, 2)), Number(t.slice(3))]
 //     : [0, 0];
 // console.log(t, n);
-
 // console.log(`${n[0]} г.${(n[1] && n[1] !== 0 && ` ${n[1]} хв.`) || ""}`);
 // console.log(`${n[0]} г.${n[1] ? ` ${n[1]} хв.` : ""}`);
 
-t = prompt("Enter time", "13:13");
-n = t.match(/^\d{1,2}:\d{2}$/) ? t.split(":").map(Number) : [0, 0];
-console.log(`${n[0]} г.${n[1] ? ` ${n[1]} хв.` : ""}`);
+// t = prompt("Enter time", "13:13");
+
+t = "13:00";
+// n = t.match(/^\d{1,2}:\d{2}$/) ? t.split(":").map(Number) : [0, 0];
+// console.log(`${n[0]} г.${n[1] ? ` ${n[1]} хв.` : ""}`);
+
+console.log(t.replace(/^(\d{1,2})\D(\d{2})$/, `$1ч. $2м.`));
+
+console.log(
+  t.replace(/^(\d{1,2})\D(\d{2})$/, (_, h, m) =>
+    m === "00" ? `${h}ч.` : `${h}ч. ${m}м.`
+  )
+);
