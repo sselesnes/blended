@@ -3,4 +3,11 @@
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-// const checkAge = confirm(`Are you adult?`);
+//
+// example 1
+//
+function isAdult() {   
+    return prompt(`Enter your age`) >= 18 ? true : confirm(`Are you adult?`)
+}
+
+console.log(isAdult());

@@ -6,9 +6,12 @@
 
 const min = Math.floor(Math.random() * (59 - 0) + 0);
 
+
+//
+// example 1
+//
 // let message, calc;
 // calc = Math.floor(min / 15);
-
 // if (calc >= 3) {
 //   message = `${min} потрапляє у четверту чверть години`;
 // } else if (calc >= 2) {
@@ -19,9 +22,11 @@ const min = Math.floor(Math.random() * (59 - 0) + 0);
 //   message = `${min} потрапляє в першу чверть години`;
 // }
 
+//
+// example 2
+//
 let dict = ["першу", "другу", "третю", "четверту"];
 let result = Math.floor(min / 15);
 let message = `${min} потрапляє у ${dict[result]} чверть години`;
 
-// console.log(message);
 alert(message);

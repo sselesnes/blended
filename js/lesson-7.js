@@ -6,6 +6,9 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
+//
+// example 1
+//
 // function getNumbers(min, max) {
 //     let twins = 0;
 //     for (let calc = max; calc >= min; calc--) {
@@ -16,6 +19,10 @@
 //     }
 //     return twins;
 // }
+
+//
+// example 2
+//
 
 function getNumbers(min, max) {
   let calc = 0;

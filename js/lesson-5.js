@@ -15,6 +15,9 @@
 
 const login = prompt("Логін");
 
+//
+// example 1
+//
 // let pass;
 // if (login !== "Адмін") {
 //   alert("Я вас не знаю");
@@ -29,7 +32,9 @@ const login = prompt("Логін");
 //   alert("Невірний пароль!");
 // }
 
-
+//
+// example 2
+//
 let pass;
 let message = login === "Адмін"
   ? (pass = prompt("Пароль")) === null || pass === ""
