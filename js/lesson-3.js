@@ -12,24 +12,34 @@
 //
 // example 1
 //
-let num = Number(prompt("Введіть номер місяця:"));
-let result;
+// let num = Number(prompt("Введіть значення"));
+// let result;
 
-switch (num) {
-  case 1:
-    result = "зима";
-    break;
-  case 2:
-    result = "весна";
-    break;
-  case 3:
-    result = "літо";
-    break;
-  case 4:
-    result = "осінь";
-    break;
-  default:
-    result = "Вибачте, але ви маєте ввести значення від 1 до 4 включно";
+// switch (num) {
+//   case 1:
+//     result = "зима";
+//     break;
+//   case 2:
+//     result = "весна";
+//     break;
+//   case 3:
+//     result = "літо";
+//     break;
+//   case 4:
+//     result = "осінь";
+//     break;
+//   default:
+//     result = "Вибачте, але ви маєте ввести значення від 1 до 4 включно";
+// }
+
+// alert(result);
+
+//
+// example 2
+//
+function num(num) {
+  const seasons = ["зима", "весна", "літо", "осінь", "Вибачте, але ви маєте ввести значення від 1 до 4 включно"];  
+  return num && num >= 1 && num <=4 ? seasons[num-1] : seasons[4] 
 }
 
-alert(result);
+alert(`Місяць ${ num(prompt(`Введіть номер місяця`))}`);
