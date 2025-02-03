@@ -37,9 +37,9 @@
 //
 // example 2
 //
-function num(num) {
+function season(num) {
   const seasons = ["зима", "весна", "літо", "осінь", "Вибачте, але ви маєте ввести значення від 1 до 4 включно"];  
   return num && num >= 1 && num <=4 ? seasons[num-1] : seasons[4] 
 }
 
-alert(`Сезон ${ num(prompt(`Введіть номер сезону`))}`);
+alert(`Сезон ${season(prompt(`Введіть номер сезону`))}`);
