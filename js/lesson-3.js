@@ -42,4 +42,4 @@ function num(num) {
   return num && num >= 1 && num <=4 ? seasons[num-1] : seasons[4] 
 }
 
-alert(`Місяць ${ num(prompt(`Введіть номер місяця`))}`);
+alert(`Сезон ${ num(prompt(`Введіть номер сезону`))}`);
